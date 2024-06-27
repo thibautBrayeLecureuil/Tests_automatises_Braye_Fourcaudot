@@ -10,16 +10,16 @@ Feature: Denial of entry when the bar is full
   Scenario: Mr. Pignon and Mr. Leblanc arrive with 8 people already in the bar
     Given Mr. Pignon and Mr. Leblanc want to enter the bar
     And there are already 8 people in the bar
-    When they enter the bar
-    Then the person behind them cannot enter
-    And the bar displays "full"
+    When they try to enter
+    And the person behind try enter
+    Then the bar displays "full"
 
 
   Scenario: Mr. Pignon and Mr. Leblanc arrive with 3 people already in the bar
     Given Mr. Pignon and Mr. Leblanc want to enter the bar
     And there are already 3 people in the bar
-    When they enter the bar
-    Then they find seats
+    When they try to enter
+    Then the bar displays "not full"
 
   @tag2
   Scenario Outline: Title of your scenario outline
