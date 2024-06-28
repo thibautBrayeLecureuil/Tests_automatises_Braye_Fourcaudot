@@ -4,7 +4,7 @@ Feature: Ordering and paying for multiple cocktails
     Given Mr. Pignon and Mr. Leblanc are in the bar
     When Mr. Pignon and Mr. Leblanc order 2 cocktails at 10€ each
     And They pay separatly
-    Then they each pays 10€
+    Then They each pays 10€
 
   Scenario: Mr. Leblanc orders more cocktails and pays
     Given Mr. Pignon and Mr. Leblanc are in the bar

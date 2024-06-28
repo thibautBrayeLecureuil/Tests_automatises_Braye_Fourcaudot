@@ -16,22 +16,22 @@ public class PlaceSteps {
 	
 	@Given("^there are already (//d+) people in the bar")
 	public void setupSeats(int arg1) {
-		place.setSeats(arg1);
+		place.addSeats(arg1);
 	}
 	
 	@When("^they try to enter")
-	public void canEnter() {
-		bar.addSeats(2);
+	public void TwoPersonneTryToEnter() {
+		place.addSeats(2);
 	}
 	
 	@When("^the person behind try enter")
-	public void canEnter() {
-		bar.addSeats(1);
+	public void OnePersonneTryToEnter() {
+		place.addSeats(1);
 	}
 
 
 	@Then("^the bar displays {string}")
-	public void the_result_is(string expected) {
+	public void the_result_is(String expected) {
 		assertEquals(expected, place.status);
 	}
 
