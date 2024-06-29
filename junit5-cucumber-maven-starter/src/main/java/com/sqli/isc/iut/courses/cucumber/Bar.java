@@ -21,11 +21,15 @@ public class Bar {
 	}
 	
 	public ArrayList<Integer> check() {
+		ArrayList<Integer> res = new ArrayList<>();
 		if (this.splitBill) {
 			int splitAmount = this.bill/2;
-			return (ArrayList<Integer>) asList(splitAmount, splitAmount);
+			res.add(splitAmount);
+			res.add(splitAmount);
 		}else {
-			return (ArrayList<Integer>) asList(this.bill);
+			res.add(this.bill);
 		}
+		return res;
+
 	}
 }

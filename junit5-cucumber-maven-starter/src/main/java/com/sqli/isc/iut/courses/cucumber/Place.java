@@ -19,5 +19,8 @@ public class Place {
 		}
 	}
 
+	public boolean canTakeSeats() {
+		return this.takenSeats + 2 <= this.maximumSeats;
+	}
 
 }
